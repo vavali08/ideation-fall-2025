@@ -11,9 +11,9 @@
 
 | Name | PennKey | Primary Role(s) | Secondary Skills |
 |------|---------|----------------|------------------|
-| Vedha Avali | vavali | Backend Developer, API Design| Node.js, PostgreSQL |
-| Nathan Lee | nzlee | Frontend Developer, UX Design | React, Figma, Data Visualization |
-| Leha Choppara | lehac | Dashboard & Visualization | HTML/CSS, Chart.js, React |
+| Vedha Avali | vavali | Frontend Developer, Backend API Design, UI| Node.js, PostgreSQL, React, Figma |
+| Nathan Lee | nzlee | Backend Developer, API Design | Node.js, PostgreSQL |
+| Leha Choppara | lehac | Dashboard & Visualization, Backend API Design| HTML/CSS, Chart.js, React |
 | Manasi Gajjalapurna |       | Integration & Testing | Deployment, Copywriting |
 ___
 
@@ -22,8 +22,8 @@ ___
 **Skills we have:**
 - **Frontend (React, HTML/CSS)**: Nathan, Vedha, Leha  
 - **Backend (Node.js, Express)**: Vedha, Nathan  
-- **Data Visualization (Chart.js, Recharts)**: Leha, Manasi  
-- **Deployment (Render/Vercel)**: Manasi 
+- **Data Visualization (Chart.js, Recharts)**: Leha, Vedha,
+- **Deployment (AWS)**: Nathan, Vedha, Leha, Manasi 
 
 **Skills we need to learn/acquire:**
 - **Basic Data Aggregation Analytics** – summarize confusion trends – *Leha + Nathan*  
@@ -43,12 +43,13 @@ _List all time slots when the ENTIRE team can meet with a TA. Use Eastern Time. 
 - Thursday: [Not available]
 - Friday: [e.g., 1:00 PM - 3:00 PM]
 
-**Preferred meeting duration**: [30 min / 45 min / 60 min]
+**Preferred meeting duration**: 30 minutes
 
-**Meeting format preference**: [In-person / Zoom / Either]
+**Meeting format preference**: Zoom
 
-**Primary contact for scheduling**: [Name and email]
+**Primary contact for scheduling**: Vedha Avali - vavali@seas.upenn.edu
 
+Available times included in below When2Meet:
 https://www.when2meet.com/?33539239-Fh9qr
 ---
 
@@ -281,7 +282,7 @@ _Walk through a concrete example of your aggregation module in action_
 
 ---
 
-## User Interface & Mockups
+## User Interface & s
 
 ### Interfaces Required
 
@@ -303,7 +304,8 @@ _You need mockups for ALL user-facing interfaces_
 
 ### Mockup Details
 
-**Mockup location:** `docs/mockups/` (Final Figma prototype link pending)
+**Mockup location:** [`docs/mockups/` (Final Figma prototype link pending)](https://www.figma.com/make/leWrdYzijUIhmHoHWO14gs/CrowdQA?node-id=0-4&t=z83hW0x3lYyhRyfo-1).
+Mockups for all screens are included in this Figma prototype.
 
 **For each interface, describe**:
 
@@ -315,7 +317,7 @@ _You need mockups for ALL user-facing interfaces_
   - Text feedback box (optional short note, e.g., "Didn’t understand example 2")
   - Real-time feedback count (“You’ve clicked 2 times”)
   - Session code displayed in header
-- **Mockup file:** `docs/mockups/student_view.png`
+- **Mockup file:** Figma
 - **Notes:** 
   - Minimal distraction design — single primary action.  
   - Large hit area for mobile usability.  
@@ -330,7 +332,7 @@ _You need mockups for ALL user-facing interfaces_
   - “Join” button to access the main confusion interface
   - Error message if code invalid or expired
   - Display of current recitation name once joined
-- **Mockup file:** `docs/mockups/join_session.png`
+- **Mockup file:** Figma
 - **Notes:**
   - Ensures only valid sessions receive confusion data.
   - Session codes generated dynamically by TA dashboard.
@@ -346,7 +348,7 @@ _You need mockups for ALL user-facing interfaces_
   - Numeric summary of participation (total clicks, unique students)
   - Manual “Refresh” button for MVP (no WebSocket dependency)
   - Optional toggle to show student notes under peaks
-- **Mockup file:** `docs/mockups/ta_dashboard_live.png`
+- **Mockup file:** Figma
 - **Notes:**
   - Built with Recharts or Chart.js for real-time visual updates.
   - Aggregation done in 5-minute bins for a 1-hour recitation.
@@ -362,7 +364,7 @@ _You need mockups for ALL user-facing interfaces_
   - Red-highlighted rows for peak confusion bins
   - Simple histogram or bar chart visualization
   - Button: “Download Summary (CSV)” (optional stretch)
-- **Mockup file:** `docs/mockups/ta_summary_report.png`
+- **Mockup file:** Figma
 - **Notes:**
   - Supports retrospective analysis for teaching improvement.
   - Optional integration with Canvas or Google Sheets for recordkeeping.
@@ -377,7 +379,7 @@ _You need mockups for ALL user-facing interfaces_
   - Form fields: Course Name, Recitation Date, Duration, TA Name
   - Button: “Generate Session Code”
   - Output: Display of session code and shareable join link
-- **Mockup file:** `docs/mockups/session_creator.png`
+- **Mockup file:** Figma
 - **Notes:**
   - Automatically stores metadata in the database.
   - Used by TAs before recitation begins; not visible to students.
@@ -645,36 +647,35 @@ The backend returns the aggregated data structure (intervals, counts, percentage
 
 ### Week-by-Week Plan
 
-**Week 1 (Dates: February 5 - February 11)**  
+**Week 1 (Dates: Nov 17 Week)**  
 - Milestone: Finalize recruitment, finalize tech stack, and confirm project scope  
 - Tasks:  
   - [ ] Post recruitment announcements in relevant Slack channels and class forums - [Vedha]  
   - [ ] Set up cloud infrastructure for the backend - [Nathan]  
-  - [ ] Design and finalize mockups for the student and instructor interfaces - [Leha]  
+  - [ ] Design and finalize mockups for the student and instructor interfaces - [Vedha]
+  - [ ] Start setting up backend API - [All]  
 - Deliverable: Recruitment completed, mockups ready, cloud infrastructure set up
 
-**Week 2 (Dates: February 12 - February 18)**  
+**Week 2 (Dates: Nov 24 Week)**  
 - Milestone: Build and test the MVP, focusing on core functionalities (confusion button, session code entry)  
 - Tasks:  
   - [ ] Implement confusion button and session code functionality - [Vedha]  
   - [ ] Set up backend API and database for storing confusion click data - [Nathan]  
-  - [ ] Conduct first round of testing and gather initial feedback - [Leha]  
+  - [ ] Conduct first round of testing and gather initial feedback - [Leha, Manasi]  
 - Deliverable: MVP ready for first testing with live data, basic session management functionality working
 
-**Week 3 (Dates: February 19 - February 25)**  
-- Milestone: Polish the MVP, integrate the instructor dashboard and data aggregation  
+**Week 3 (Dates: Dec 1 Week)**  
+- Milestone: Test MVP in student Recitations and collect data
 - Tasks:  
-  - [ ] Implement instructor dashboard with data aggregation and visualization - [Manasi]  
-  - [ ] Complete student interface testing and finalize confusion data submission - [Vedha]  
-  - [ ] Prepare post-class summary email system - [Leha]  
+  - [ ] Testing MVP in recitations - [Vedha, Leha, Nathan]
 - Deliverable: MVP tested with instructor feedback, confusion data aggregation functional, system polished for full pilot testing
 
-**Week 4 (Dates: February 26 - March 4)**  
+**Week 4 (Dates: Dec 8 Week)**  
 - Milestone: Final pilot testing, system optimization, and project wrap-up  
 - Tasks:  
   - [ ] Conduct final pilot test with all features integrated (live session with confusion data) - [Vedha]  
   - [ ] Optimize system performance and debug any issues - [Nathan]  
-  - [ ] Prepare final project presentation and documentation - [Manasi]  
+  - [ ] Prepare final project presentation and documentation - [Manasi, Leha]  
 - Deliverable: Final tested and fully integrated MVP, complete documentation
 
 ### Critical Path
